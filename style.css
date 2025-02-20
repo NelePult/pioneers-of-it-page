@@ -1,0 +1,126 @@
+*{
+    box-sizing: border-box; 
+    margin: 0; 
+    padding: 0; 
+}
+
+/* To Do: 
+    -z-index? 
+    - img svg */
+
+body{
+    font-size: 16px;
+    font-family: "IBM Plex Sans", sans-serif;
+    background-color: #dee2e6; 
+}
+ 
+
+#person-grid-container{
+    padding: 5% 3%; 
+}
+
+#person-1{
+    background-color: #964734;
+    color: #eeeeee;  
+}
+
+#person-2{
+    background-color: #003135; 
+    color:#eeeeee; 
+    z-index:0; 
+}
+
+#person-3{
+    background-color: #eeeeee; 
+    color:#0D0D0D; 
+}
+
+#person-4{
+    background-color: #024950 ; 
+    color:#eeeeee; 
+}
+
+#person-5{
+    background-color: #eeeeee; 
+    color:#0D0D0D; 
+} 
+
+.grid-item{
+    margin-bottom: 20px; 
+    padding: 20px; 
+    border-radius: 6px; 
+    box-shadow: 1px 1px 5px 1px rgba(0,0,0,0.2);
+}
+
+.grid-item h4{
+    margin-bottom: 8px; 
+}
+
+.header{
+    display: flex;
+    align-items: center;
+    border-radius: 50%;
+    margin-right: 10px;
+    margin-bottom: 20px; 
+}
+
+.header img{
+    margin-right: 10px; 
+    border-radius: 50%;
+    object-fit: cover; 
+    width: 60px;
+    height: 60px;
+    border: 1px solid #989a9b; 
+}
+
+p{
+    opacity: 80%;
+}
+
+#programming{
+    position: absolute; 
+    height: 10%; 
+    opacity: 0.5;
+    right: 33%; 
+    z-index: 1; 
+}
+
+@media (min-width: 576px){
+
+    #person-grid-container{
+        display: flex; 
+        max-width: 1300px;
+        margin: 0 auto; 
+        justify-content: space-between; 
+    }
+
+    #person-5{
+        flex-basis: 25%; 
+    }
+
+    #main-left{
+        display: flex;
+        flex-direction: column;
+        flex-basis: 75%; 
+    }
+
+    #main-left .grid-item{
+        margin-right: 15px;  
+    }
+
+    #bottom, #top{
+        display: flex; 
+        flex-basis: 50%;
+    }
+
+    #person-1, #person-4{
+        flex-basis: 35%;
+    }
+
+    #person-2, #person-3{
+        flex-basis: 70%;
+    }
+        
+}
+
+
